@@ -198,6 +198,14 @@
         </dependency>
         <dependency>
             <groupId>be.machigan</groupId>
+            <artifactId>ProtectedDebugStick-v26_1_R2</artifactId>
+            <version>v26_1_R2</version>
+            <type>jar</type>
+            <scope>compile</scope>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>be.machigan</groupId>
             <artifactId>ProtectedDebugStick-global</artifactId>
             <version>global</version>
             <type>jar</type>
