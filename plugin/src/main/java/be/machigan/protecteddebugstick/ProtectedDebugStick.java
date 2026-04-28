@@ -28,6 +28,10 @@ public class ProtectedDebugStick extends JavaPlugin {
         instance = this;
         VersionChecker.checkVersion();
 
+        if (isPurpurServer()) {
+            getLogger().info("Purpur server detected - Purpur support enabled.");
+        }
+
         getServer().getPluginManager().registerEvents(new OnUse(), this);
         getServer().getPluginManager().registerEvents(new OnClickInspector(), this);
         getServer().getPluginManager().registerEvents(new OnUpdate(), this);
@@ -62,6 +66,15 @@ public class ProtectedDebugStick extends JavaPlugin {
             return;
         }
         PROPERTIES.addAll(propertyHandler.getUsableProperties());
+    }
+
+    public static boolean isPurpurServer() {
+        try {
+            Class.forName("org.purpurmc.purpur.PurpurServer");
+            return true;
+        } catch (ClassNotFoundException e) {
+            return false;
+        }
     }
 
     public static boolean isPlaceHolderApiEnable() {

@@ -288,9 +288,9 @@ Recipes:
     Item: "BASIC"
     Durability: 1000
     Craft:
-      2: "DIAMOND"
-      5: "BLAZE_ROD"
-      8: "BLAZE_ROD"
+      2: "CRAFTING_TABLE"
+      5: "STICK"
+      8: "STICK"
   infinity:
     Item: "INFINITY"
     Craft:
